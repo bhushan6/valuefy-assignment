@@ -1,0 +1,301 @@
+:root {
+  --primary: #3d3d3d;
+  --secondary: #8b8b8b;
+  --equity-data: #415a76;
+  --debt-data-one: #14a388;
+  --debt-data-two: #12bb9b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 5rem;
+  background-color: #efefef;
+  box-shadow: 0px 4px 6px 0px rgba(187, 187, 187, 0.75);
+  -webkit-box-shadow: 0px 4px 6px 0px rgba(187, 187, 187, 0.75);
+  -moz-box-shadow: 0px 4px 6px 0px rgba(187, 187, 187, 0.75);
+}
+
+header .left {
+  min-width: 20vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .left a img {
+  width: 150px;
+}
+
+header i {
+  font-size: 2rem;
+  color: #b9b9b9;
+}
+
+/* --HEADER-- */
+
+/* MAIN */
+
+main {
+  width: 100%;
+  text-align: center;
+  margin-top: 5rem;
+  text-transform: capitalize;
+}
+
+main .title {
+  margin: 2rem;
+}
+
+main .title h1 {
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: var(--primary);
+}
+
+main .title p {
+  font-size: 0.7rem;
+  font-weight: 100;
+  color: var(--secondary);
+}
+
+main .overview {
+  margin: 2rem auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main .overview .lable {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 16%;
+  text-align: left;
+}
+
+main .overview .lable div {
+  margin: 00.5rem;
+}
+
+main .overview .lable .icon {
+  font-size: 3rem;
+  color: var(--secondary);
+  font-weight: lighter;
+}
+
+main .overview .lable .info h1 {
+  font-size: 2rem;
+  font-weight: lighter;
+  color: var(--primary);
+}
+
+main .overview .lable .info p {
+  font-size: 0.7rem;
+  color: var(--secondary);
+}
+
+main .visual-data {
+  margin: 2rem auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .visual-data .radial-chart {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+main .visual-data .radial-chart svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 400px;
+}
+
+main .visual-data .radial-chart svg circle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-width: 15px;
+  fill: transparent;
+}
+
+main .visual-data .radial-chart svg .equity-data {
+  stroke: var(--equity-data);
+  stroke-dashoffset: 439.6px;
+  stroke-dasharray: 879.2px 879.2px;
+}
+
+main .visual-data .radial-chart svg .debt-data-two {
+  stroke: var(--debt-data-two);
+  stroke-dashoffset: 219.8px;
+  stroke-dasharray: 879.2px 879.2px;
+}
+
+main .visual-data .radial-chart svg .debt-data-one {
+  stroke: var(--debt-data-one);
+  stroke-dashoffset: 0px;
+  stroke-dasharray: 879.2px 879.2px;
+}
+
+main .visual-data .radial-chart .stat-text {
+  text-align: center;
+  margin-left: -40px;
+}
+
+main .visual-data .radial-chart .stat-text .debt {
+  color: var(--debt-data-two);
+}
+
+main .visual-data .card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+main .visual-data .card-container .card {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  border: 1px solid var(--secondary);
+  height: 100px;
+  width: 500px;
+}
+
+main .visual-data .card-container .card .card-info .fund {
+  margin: 1rem;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+main .visual-data .card-container .card .card-info .fund-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 1rem;
+}
+
+main .visual-data .card-container .card .card-info .fund-info p {
+  font-size: 0.7rem;
+  color: var(--secondary);
+}
+
+main .visual-data .card-container .card .card-info .fund-info .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--debt-data-two);
+  margin-right: 0.5rem;
+}
+
+main .visual-data .card-container .card .card-info .fund-info .flex {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+main .visual-data .card-container .card .amount {
+  padding: 1rem;
+  background-color: var(--debt-data-two);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--debt-data-two);
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  outline: none;
+  border: none;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+/*-- MAIN --*/
+
+@media (max-width: 900px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  header .left {
+    min-width: 40vw;
+  }
+
+  header .left a img {
+    width: 100px;
+  }
+
+  header i {
+    font-size: 1.5rem;
+  }
+
+  main .title h1 {
+    font-size: 1.5rem;
+  }
+
+  main .overview .lable .icon {
+    font-size: 2rem;
+  }
+
+  main .overview .lable .info h1 {
+    font-size: 1rem;
+  }
+
+  main .visual-data {
+    flex-direction: column;
+  }
+
+  main .visual-data .card-container .card {
+    width: 350px;
+  }
+
+  main .visual-data .card-container .card .card-info .fund {
+    font-size: 0.8rem;
+  }
+
+  main .visual-data .card-container .card .card-info .fund-info p {
+    font-size: 0.6rem;
+  }
+
+  main .visual-data .card-container .card .amount {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
